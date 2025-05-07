@@ -67,7 +67,7 @@ Set these in your GitHub repository settings under `Settings > Secrets and varia
 │   └── app.test.js
 ├── .github/
 │   └── workflows/
-│       └── docker.yml
+│       └── ci-cd.yml
 ├── eslint.config.mjs
 ├── .dockerignore
 ├── .gitignore

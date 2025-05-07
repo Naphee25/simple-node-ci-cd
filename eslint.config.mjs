@@ -8,7 +8,7 @@ import { defineConfig } from "eslint/config";
 export default defineConfig([
   // Globally ignore dist and node_modules
   {
-    ignores: ["package.json", "package-lock.json", "node_modules/**"],
+    ignores: ["dist/**", "node_modules/**"],
   },
 
   // JS and JSX files with JS plugin
@@ -67,5 +67,15 @@ export default defineConfig([
     plugins: { css },
     language: "css/css",
     extends: ["css/recommended"]
+  },
+
+  // Jest environment for test files
+  {
+    files: ["**/*.test.js", "**/*.spec.js"], // Add pattern for test files
+    languageOptions: {
+      env: {
+        jest: true // Enable Jest globals
+      }
+    }
   }
 ]);

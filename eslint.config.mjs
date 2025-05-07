@@ -3,13 +3,12 @@ import globals from "globals";
 import json from "@eslint/json";
 import markdown from "@eslint/markdown";
 import css from "@eslint/css";
-import pluginReact from "eslint-plugin-react";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
   // Globally ignore dist and node_modules
   {
-    ignores: ["dist/**", "node_modules/**"],
+    ignores: ["package.json", "package-lock.json", "node_modules/**"],
   },
 
   // JS and JSX files with JS plugin
@@ -29,19 +28,6 @@ export default defineConfig([
     }
   },
 
-  // React specific rules for JS and JSX files
-  {
-    files: ["**/*.{js,jsx}"],
-    plugins: { react: pluginReact },
-    rules: {
-      ...pluginReact.configs.recommended.rules
-    },
-    settings: {
-      react: {
-        version: "detect"
-      }
-    }
-  },
 
   // JSON files
   {

@@ -74,3 +74,7 @@ Set these in your GitHub repository settings under `Settings > Secrets and varia
 ├── package.json
 └── package-lock.json
 ```
+
+## 👩🏽‍💻 Author
+
+Nafisah — [Medium](https://medium.com/@nafisahabidemiabdulkadir)
